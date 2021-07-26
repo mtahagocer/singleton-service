@@ -1,5 +1,5 @@
 {
-  "name": "singleton-service",
+  "name": "singleton-container",
   "version": "1.0.0",
   "description": "Singleton container for vanilla js",
   "main": "index.js",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mtahagocer/singleton-service.git"
+    "url": "git+https://github.com/mtahagocer/singleton-container.git"
   },
   "keywords": [
     "singleton",
@@ -20,9 +20,9 @@
   "author": "M Taha GÖÇER",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mtahagocer/singleton-service/issues"
+    "url": "https://github.com/mtahagocer/singleton-container/issues"
   },
-  "homepage": "https://github.com/mtahagocer/singleton-service#readme",
+  "homepage": "https://github.com/mtahagocer/singleton-container#readme",
   "devDependencies": {
     "typescript": "^4.3.5"
   }
