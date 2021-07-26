@@ -4,11 +4,16 @@ Just initialize your instances on app entry point, then use on where ever you wa
 
 Use repo as a npm dependency on your package.json like :
 
-```json
-"singleton": "https://github.com/mtahagocer/SingletonService"
-```
 
-In example :
+## Setup
+First, install it:
+
+npm install --save singleton-container
+or
+
+yarn add singleton-container
+
+## Usage with example :
 
 Singleton/create.ts
 ```js
@@ -23,7 +28,7 @@ Finally, on app entry point, you can initialize all your instances.
 import '@src/services/Singleton/create';
 ```
 
-Usage:
+## Usage:
 
 SomeFile.js
 
