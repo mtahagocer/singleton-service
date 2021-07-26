@@ -1,4 +1,4 @@
-# SingletonService
+# Singleton Container (Less than 1kb)
 
 Just initialize your instances on app entry point, then use on where ever you want.
 
@@ -14,6 +14,7 @@ Singleton/create.ts
 ```js
 import NetworkInstance from '../network/instance';
 
+// for create instance with a unic key
 SingletonContainer.set('Request', NetworkInstance);
 ```
 
@@ -25,11 +26,15 @@ import '@src/services/Singleton/create';
 Usage:
 
 SomeFile.js
+
+```js
 import SingletonContainer from 'singleton';
 
+// for get instance with saved key
 const Request = SingletonContainer.get('Request');
 
 
- For dispose instance
- SingletonContainer.delete('Request');
- 
+//For dispose instance with saved key
+SingletonContainer.delete('Request');
+
+```

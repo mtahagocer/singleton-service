@@ -1,5 +1,5 @@
 {
-  "name": "singleton-service",
+  "name": "singleton-container",
   "version": "1.0.0",
   "description": "Singleton container for vanilla js",
   "main": "index.js",
