@@ -10,7 +10,7 @@ class SingletonContainer {
     }
 
     /**
-     * Sets your instance with key
+     * Create `{any}` instance with `{string}` key
      * @param {string} key 
      * @param {any} value 
      */
@@ -26,14 +26,6 @@ class SingletonContainer {
         return this._container.get(key);
     }
 
-    /**
-     * Create `{any}` instance with `{string}` key
-     * @param {string} key
-     * @param {any} value
-     */
-    static create(key: string, value: any) {
-        this.set(key, value);
-    }
 
     /**
      * Delete instance with key
@@ -44,4 +36,4 @@ class SingletonContainer {
     }
 }
 
-export default SingletonContainer;
+module.exports = SingletonContainer;

@@ -38,4 +38,4 @@ class SingletonContainer {
     }
 }
 SingletonContainer._container = new Map();
-export default SingletonContainer;
+module.exports = SingletonContainer;
