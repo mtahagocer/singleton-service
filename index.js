@@ -44,4 +44,4 @@ class SingletonContainer {
     }
 }
 
-export default SingletonContainer;
+module.exports = SingletonContainer;
