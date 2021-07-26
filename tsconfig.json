@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
         "declaration": true,
-        "target": "ES2021"
+        "target": "ES2015"
     }
 }

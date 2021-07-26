@@ -6,7 +6,7 @@ declare class SingletonContainer {
      */
     static _has(key: string): boolean;
     /**
-     * Sets your instance with key
+     * Create `{any}` instance with `{string}` key
      * @param {string} key
      * @param {any} value
      */
@@ -16,12 +16,6 @@ declare class SingletonContainer {
      * @param {string} key
      */
     static get(key: string): any;
-    /**
-     * Create `{any}` instance with `{string}` key
-     * @param {string} key
-     * @param {any} value
-     */
-    static create(key: string, value: any): void;
     /**
      * Delete instance with key
      * @param {string} key

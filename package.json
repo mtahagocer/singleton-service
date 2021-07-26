@@ -1,12 +1,18 @@
 {
   "name": "singleton-service",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Singleton container for vanilla js",
-  "main": "index.js",
+  "main": "dist/index.js",
   "types": "index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx tsc -p tsconfig.json"
+    "build": "npx tsc -p tsconfig.json",
+    "prepublish": "yarn build && babel index.js --out-dir dist/index.js"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
   },
   "repository": {
     "type": "git",
@@ -24,6 +30,9 @@
   },
   "homepage": "https://github.com/mtahagocer/singleton-service#readme",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-es2015": "^6.24.1",
     "typescript": "^4.3.5"
   }
 }
