@@ -17,10 +17,10 @@ yarn add singleton-container
 
 Singleton/create.ts
 ```js
-import NetworkInstance from '../network/instance';
+import AxiosInstance from '../network/instance';
 
 // for create instance with a unic key
-SingletonContainer.set('Request', NetworkInstance);
+SingletonContainer.set('AxiosInstance', AxiosInstance);
 ```
 
 Finally, on app entry point, you can initialize all your instances.
@@ -36,10 +36,10 @@ SomeFile.js
 import SingletonContainer from 'singleton';
 
 // for get instance with saved key
-const Request = SingletonContainer.get('Request');
+const AxiosInstance = SingletonContainer.get('AxiosInstance');
 
 
 //For dispose instance with saved key
-SingletonContainer.delete('Request');
+SingletonContainer.delete('AxiosInstance');
 
 ```
