@@ -1,6 +1,6 @@
 {
   "name": "singleton-service",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Singleton service for vanilla js",
   "main": "dist/index.js",
   "types": "index.d.ts",
