@@ -1,7 +1,7 @@
 {
   "name": "singleton-service",
   "version": "1.0.5",
-  "description": "Singleton container for vanilla js",
+  "description": "Singleton service for vanilla js",
   "main": "dist/index.js",
   "types": "index.d.ts",
   "scripts": {
@@ -21,7 +21,10 @@
   "keywords": [
     "singleton",
     "container",
-    "singleton container"
+    "service",
+    "injection",
+    "singleton container",
+    "singleton service"
   ],
   "author": "M Taha GÖÇER",
   "license": "MIT",

@@ -1,4 +1,4 @@
-export default class SingletonContainer {
+export default class SingletonService {
     static _container: Map<any, any>;
     static _has: (key: string) => boolean;
     /**

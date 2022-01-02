@@ -1,9 +1,9 @@
 
-export default class SingletonContainer {
+export default class SingletonService {
 
     static _container = new Map();
 
-    static _has = (key: string) => SingletonContainer._container.has(key);
+    static _has = (key: string) => SingletonService._container.has(key);
 
 
     /**
@@ -11,15 +11,15 @@ export default class SingletonContainer {
      */
     static set = <T = unknown>(key: string, value: T, force = false) => {
 
-        if (!SingletonContainer._has(key) || (SingletonContainer._has(key) && force)) SingletonContainer._container.set(key, value);
+        if (!SingletonService._has(key) || (SingletonService._has(key) && force)) SingletonService._container.set(key, value);
 
         else throw new Error(`${key} is already in the container, force if you want to update it`);
 
     }
 
     // Get created `any` instance from container with `string` key
-    static get = <T>(key: string) => SingletonContainer._container.get(key) as T;
+    static get = <T>(key: string) => SingletonService._container.get(key) as T;
 
     // Delete instance with key
-    static delete = (key: string) => SingletonContainer._container.delete(key);
+    static delete = (key: string) => SingletonService._container.delete(key);
 }
