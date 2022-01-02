@@ -1,25 +1,10 @@
-declare class SingletonContainer {
+export default class SingletonContainer {
     static _container: Map<any, any>;
+    static _has: (key: string) => boolean;
     /**
-     *
-     * @param {string} key
+     * Create `any` instance with `string` key
      */
-    static _has(key: string): boolean;
-    /**
-     * Create `{any}` instance with `{string}` key
-     * @param {string} key
-     * @param {any} value
-     */
-    static set(key: string, value: any): void;
-    /**
-     * Get created `{any}` instance from container with `{string}` key
-     * @param {string} key
-     */
-    static get(key: string): any;
-    /**
-     * Delete instance with key
-     * @param {string} key
-     */
-    static delete(key: string): void;
+    static set: <T = unknown>(key: string, value: T, force?: boolean) => void;
+    static get: <T>(key: string) => T;
+    static delete: (key: string) => boolean;
 }
-export default SingletonContainer;

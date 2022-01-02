@@ -1,33 +1,17 @@
-class SingletonContainer {
-    /**
-     *
-     * @param {string} key
-     */
-    static _has(key) {
-        return this._container.has(key);
-    }
-    /**
-     * Create `{any}` instance with `{string}` key
-     * @param {string} key
-     * @param {any} value
-     */
-    static set(key, value) {
-        !this._has(key) && this._container.set(key, value);
-    }
-    /**
-     * Get created `{any}` instance from container with `{string}` key
-     * @param {string} key
-     */
-    static get(key) {
-        return this._container.get(key);
-    }
-    /**
-     * Delete instance with key
-     * @param {string} key
-     */
-    static delete(key) {
-        this._container.delete(key);
-    }
+export default class SingletonContainer {
 }
 SingletonContainer._container = new Map();
-export default SingletonContainer;
+SingletonContainer._has = (key) => SingletonContainer._container.has(key);
+/**
+ * Create `any` instance with `string` key
+ */
+SingletonContainer.set = (key, value, force = false) => {
+    if (!SingletonContainer._has(key) || (SingletonContainer._has(key) && force))
+        SingletonContainer._container.set(key, value);
+    else
+        throw new Error(`${key} is already in the container, force if you want to update it`);
+};
+// Get created `any` instance from container with `string` key
+SingletonContainer.get = (key) => SingletonContainer._container.get(key);
+// Delete instance with key
+SingletonContainer.delete = (key) => SingletonContainer._container.delete(key);
