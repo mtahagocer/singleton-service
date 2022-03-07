@@ -8,10 +8,10 @@ Use repo as a npm dependency on your package.json like :
 ## Setup
 First, install it:
 
-npm install --save singleton-container
+npm install --save singleton-service
 or
 
-yarn add singleton-container
+yarn add singleton-service
 
 ## Usage with example :
 
